@@ -1,0 +1,41 @@
+/* Home 
+
+     background: rgb(0,101,219);
+    background: linear-gradient(90deg,rgb(0,101,219)50%,rgba(0,212,255)100%  );
+    min-height: 500px;
+
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+*/
+#home{
+background-image: linear-gradient(to right top, #0053ec, #008ef5, #00b0c7, #6bc7a5, #ccd8b6);
+
+}
+
+.card{
+    transition: all ,0.5s,ease;
+}
+.card :hover{
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+/* Form
+    background: rgb(0,101,219);
+    background: linear-gradient(90deg,rgb(0,101,219) 30%,rgba(0,212,255) 100% );
+
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    */
+.form{
+    background-image: linear-gradient(to right top, #0053ec, #008ef5, #00b0c7, #6bc7a5, #ccd8b6);
+}
+/* Footer 
+ background: rgb(0,101,219);
+    background: linear-gradient(90deg,rgb(0,101,219) 40%,rgba(0,212,255) 100%);
+
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+*/
+.footer{
+    
+    background-image: linear-gradient(to right top, #0053ec, #008ef5, #00b0c7, #6bc7a5, #ccd8b6);
+}
