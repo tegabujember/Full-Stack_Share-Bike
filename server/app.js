@@ -7,6 +7,9 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 
+// from haim
+console.log('haim')
+
 //Configure ENV file and require connection file
 dotenv.config({ path: "./config.env" });
 require("./db/conn");

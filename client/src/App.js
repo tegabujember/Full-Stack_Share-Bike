@@ -14,6 +14,9 @@ import { useState, useEffect } from "react";
 import ProtectedRoute from "./ProtectedRoute";
 import NotFound from "./components/NotFound";
 
+// from haim
+console.log('haim')
+
 function App() {
   //check if user is logged in
   const [auth, setAuth] = useState(false);
