@@ -46,28 +46,29 @@ const Login = () => {
       <div className="container shadow my-3">
         <div className="row">
           <div className="col-md-5 d-flex flex-column align-items-center text-white justify-content-center form">
-            <h1 className="display-4 fw-bolder">Welcome Back</h1>
-            <p className="lead text-center">Enter Your Credential To Login </p>
-            <h5 className="mb-4">Or </h5>
+            <h1 className="display-4 fw-bolder">ברוך הבא </h1>
+            <p className="lead text-center">הזן פרטים לכניסה </p>
+            <h5 className="mb-4">או </h5>
             <NavLink
               to="/register"
               className="btn btn-outline-light rounded-pill pb-2 w-50"
             >
-              Register
+              הרשמה
             </NavLink>
           </div>
           {/*login line start here */}
           <div className="col-md-6 p-5 ">
-            <h1 className="display-6 fw-bolder mb-5 ">Login</h1>
+            <h1 className="display-6 fw-bolder mb-5 ">כניסה</h1>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label for="exampleInputEmail1"> </label>
                 <input
                   type="email"
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                   name="email"
+                  placeholder="כתובת דואר אלקטרוני "
                   value={user.email}
                   onChange={handleChange}
                 />
@@ -76,12 +77,13 @@ const Login = () => {
                 </small>
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label for="exampleInputPassword1"></label>
                 <input
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
                   name="password"
+                  placeholder="סיסמה"
                   value={user.password}
                   onChange={handleChange}
                 />
@@ -93,14 +95,14 @@ const Login = () => {
                   id="exampleCheck1"
                 />
                 <label className="form-check-label" for="exampleCheck1">
-                  Remember me
+                  זכור אותי
                 </label>
               </div>
               <button
                 type="submit"
                 className="btn btn-primary w-100 mt-4 rounded-pill"
               >
-                Login
+                כניסה
               </button>
             </form>
           </div>

@@ -43,17 +43,14 @@ const Contact = () => {
       console.log(error);
     }
   };
-  //
+  //<h3 className="fs-5 text-center mb-0">צור קשר </h3>
   return (
     <div>
       <section id="contact">
         <div className="container my-1 py-1">
           <div className="row mb-5">
             <div className="col-12">
-              <h3 className="fs-5 text-center mb-0">Contact Us</h3>
-              <h1 className="display-6  text-center mb-4">
-                Have Some <b>Question ? </b>
-              </h1>
+              <h1 className="display-6  text-center mb-4">צור קשר</h1>
               <hr className="w-25 mx-auto " />
             </div>
           </div>
@@ -69,44 +66,43 @@ const Contact = () => {
           <div className="col-md-6 ">
             <form onSubmit={handleSubmit} method="POST">
               <div class="form-group">
-                <label htmlFor="exampleFormControlInput1">Your Name</label>
+                <label htmlFor="exampleFormControlInput1"></label>
                 <input
                   type="text"
                   class="form-control"
                   id="name"
-                  placeholder="itzik"
+                  placeholder="שם פרטי "
                   name="name"
                   value={msg.name}
                   onChange={handleChange}
                 />
               </div>
               <div class="form-group">
-                <label htmlFor="exampleFormControlInput1">Email address</label>
+                <label htmlFor="exampleFormControlInput1"></label>
                 <input
                   type="email"
                   class="form-control"
                   id="exampleFormControlInput1"
-                  placeholder="name@example.com"
+                  placeholder="כתובת דואר אלקטרוני "
                   name="email"
                   value={msg.email}
                   onChange={handleChange}
                 />
               </div>
               <div class="form-group">
-                <label htmlFor="exampleFormControlTextarea1">
-                  Your Message
-                </label>
+                <label htmlFor="exampleFormControlTextarea1"></label>
                 <textarea
                   class="form-control"
                   id="exampleFormControlTextarea1"
                   rows="5"
                   name="message"
                   value={msg.message}
+                  placeholder="הודעה"
                   onChange={handleChange}
                 ></textarea>
               </div>
               <button type="submit" className="btn btn-outline-primary">
-                Send Message <i className="fa fa-paper-plane ms-2"></i>
+                שליחה<i className="fa fa-paper-plane ms-2"></i>
               </button>
             </form>
           </div>
