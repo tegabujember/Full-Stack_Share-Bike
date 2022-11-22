@@ -1,6 +1,7 @@
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ShowVehicles from "./components/pages/ShowVehicles";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -13,9 +14,6 @@ import Logout from "./components/Logout";
 import { useState, useEffect } from "react";
 import ProtectedRoute from "./ProtectedRoute";
 import NotFound from "./components/NotFound";
-
-// from haim
-console.log('haim')
 
 function App() {
   //check if user is logged in
@@ -58,6 +56,7 @@ function App() {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/service" element={<Services />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/vehicles" element={<ShowVehicles />} />
         <Route exact path="/" element={<ProtectedRoute auth={auth1} />}>
           <Route exact path="/login" element={<Login />} />
         </Route>
@@ -69,6 +68,9 @@ function App() {
         </Route>
         <Route exact path="/" element={<ProtectedRoute auth={auth} />}>
           <Route exact path="/logout" element={<Logout />} />
+        </Route>
+        <Route exact path="/" >
+          <Route exact path="/vehicles" element={<ShowVehicles />} />
         </Route>
         <Route exact path="/*" element={<NotFound />}></Route>
       </Routes>

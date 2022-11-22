@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,33 +15,33 @@ const Footer = () => {
                 <h5>Section</h5>
                 <ul className="nav flex-column">
                   <li className="nav-item mb-2">
-                    <a to="#" className="nav-link p-0 text-white">
+                    <Link to="#" className="nav-link p-0 text-white">
                       HOME
-                    </a>
+                    </Link>
                   </li>
                   {/* new li */}
                   <li className="nav-item mb-2">
-                    <a to="#" className="nav-link p-0 text-white">
+                    <Link to="#" className="nav-link p-0 text-white">
                       Features
-                    </a>
+                    </Link>
                   </li>
                   {/* new li */}
                   <li className="nav-item mb-2">
-                    <a to="#" className="nav-link p-0 text-white">
+                    <Link to="#" className="nav-link p-0 text-white">
                       Pricing
-                    </a>
+                    </Link>
                   </li>
                   {/* new li */}
                   <li className="nav-item mb-2">
-                    <a to="#" className="nav-link p-0 text-white">
+                    <Link to="#" className="nav-link p-0 text-white">
                       FAQs
-                    </a>
+                    </Link>
                   </li>
                   {/* new li */}
                   <li className="nav-item mb-2">
-                    <a to="#" className="nav-link p-0 text-white">
+                    <Link to="#" className="nav-link p-0 text-white">
                       About
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -73,19 +74,19 @@ const Footer = () => {
               <p>@ 2022 Company , inc. All right reserved.</p>
               <ul className="list-unstyled d-flex">
                 <li className="ms-3">
-                  <a href="" className="link-light" to="#">
+                  <Link to="#" className="link-light">
                     <i className="fa fa-facebook fa-2x"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li className="ms-3">
-                  <a href="" className="link-light" to="#">
+                  <Link to="#" className="link-light">
                     <i className="fa fa-instagram fa-2x"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li className="ms-3">
-                  <a href="" className="link-light" to="#">
+                  <Link to="#" className="link-light">
                     <i class="fa fa-envelope fa-2x "></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

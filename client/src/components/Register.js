@@ -33,12 +33,12 @@ const Register = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
       });
-      if (res.status === 400 || !res) {
-        window.alert("Already Used Details");
-      } else {
+      // if (!res.ok) {
+      //   window.alert("Already Used Details");
+      // } else {
         window.alert("Registered Successfully");
-        navigate("/login");
-      }
+        navigate("/");
+      //}
     } catch (error) {
       console.log(error);
     }

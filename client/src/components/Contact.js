@@ -68,11 +68,11 @@ const Contact = () => {
           </div>
           <div className="col-md-6 ">
             <form onSubmit={handleSubmit} method="POST">
-              <div class="form-group">
+              <div className="form-group">
                 <label htmlFor="exampleFormControlInput1">Your Name</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="name"
                   placeholder="itzik"
                   name="name"
@@ -80,11 +80,11 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label htmlFor="exampleFormControlInput1">Email address</label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="name@example.com"
                   name="email"
@@ -92,12 +92,12 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label htmlFor="exampleFormControlTextarea1">
                   Your Message
                 </label>
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlTextarea1"
                   rows="5"
                   name="message"

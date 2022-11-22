@@ -61,7 +61,7 @@ const Login = () => {
             <h1 className="display-6 fw-bolder mb-5 ">Login</h1>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label htmlFor="exampleInputEmail1">Email address</label>
                 <input
                   type="email"
                   className="form-control"
@@ -76,7 +76,7 @@ const Login = () => {
                 </small>
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label htmlFor="exampleInputPassword1">Password</label>
                 <input
                   type="password"
                   className="form-control"
@@ -92,7 +92,7 @@ const Login = () => {
                   className="form-check-input"
                   id="exampleCheck1"
                 />
-                <label className="form-check-label" for="exampleCheck1">
+                <label className="form-check-label" htmlFor="exampleCheck1">
                   Remember me
                 </label>
               </div>

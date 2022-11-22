@@ -4,6 +4,8 @@ const express = require("express");
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
+const userRouter = require('./routes/userRout');
+const vehicleRouter = require('./routes/vehicleRout');
 
 const app = express();
 
@@ -31,58 +33,61 @@ app.get("/", (req, res) => {
 });
 
 //registration
-app.post("/register", async (req, res) => {
-  try {
-    //get req body or data
-    const username = req.body.username;
-    const email = req.body.email;
-    const password = req.body.password;
+app.use('/', userRouter)
+app.use('/vehicles', vehicleRouter)
 
-    const createUser = new Users({
-      username: username,
-      email: email,
-      password: password,
-    });
-    //save method is used create user or insert user
-    //but before saving or inserting ,  password will hash
-    //because of hashing ,after hash ,its will save to db
-    const created = await createUser.save();
-    // console.log(created);
-    res.status(200).send("registered");
-  } catch (error) {
-    res.status(400).send(error);
-  }
-});
+// app.post("/register", async (req, res) => {
+//   try {
+//     //get req body or data
+//     const username = req.body.username;
+//     const email = req.body.email;
+//     const password = req.body.password;
 
-//login user
-app.post("/login", async (req, res) => {
-  try {
-    const email = req.body.email;
-    const password = req.body.password;
-    //find user if exist
-    const user = await Users.findOne({ email: email });
-    if (user) {
-      //verify Password
-      const isMatch = bcryptjs.compare(password, user.password);
-      if (isMatch) {
-        //generate token witch is define in userSchema
-        const token = await user.generateToken();
-        res.cookie("jwt", token, {
-          //expires token in 24 hours
-          expires: new Date(Date.now() + 86400000),
-          httpOnly: true,
-        });
-        res.status(200).send("Logged In ");
-      } else {
-        res.status(400).send("Invalid Credential");
-      }
-    } else {
-      res.status(400).send("Invalid Credential");
-    }
-  } catch (error) {
-    res.status(400).send(error);
-  }
-});
+//     const createUser = new Users({
+//       username: username,
+//       email: email,
+//       password: password,
+//     });
+//     //save method is used create user or insert user
+//     //but before saving or inserting ,  password will hash
+//     //because of hashing ,after hash ,its will save to db
+//     const created = await createUser.save();
+//     // console.log(created);
+//     res.status(200).send("registered");
+//   } catch (error) {
+//     res.status(400).send(error);
+//   }
+// });
+
+// //login user
+// app.post("/login", async (req, res) => {
+//   try {
+//     const email = req.body.email;
+//     const password = req.body.password;
+//     //find user if exist
+//     const user = await Users.findOne({ email: email });
+//     if (user) {
+//       //verify Password
+//       const isMatch = bcryptjs.compare(password, user.password);
+//       if (isMatch) {
+//         //generate token witch is define in userSchema
+//         const token = await user.generateToken();
+//         res.cookie("jwt", token, {
+//           //expires token in 24 hours
+//           expires: new Date(Date.now() + 86400000),
+//           httpOnly: true,
+//         });
+//         res.status(200).send("Logged In ");
+//       } else {
+//         res.status(400).send("Invalid Credential");
+//       }
+//     } else {
+//       res.status(400).send("Invalid Credential");
+//     }
+//   } catch (error) {
+//     res.status(400).send(error);
+//   }
+// });
 
 //message
 app.post("/message", async (req, res) => {
@@ -109,11 +114,11 @@ app.post("/message", async (req, res) => {
 });
 
 //logout
-app.get("/logout", (req, res) => {
-  res.clearCookie("jwt", { path: "/" });
-  res.status(200).send("user logged out");
-  window.alert("user logged out");
-});
+// app.get("/logout", (req, res) => {
+//   res.clearCookie("jwt", { path: "/" });
+//   res.status(200).send("user logged out");
+//   window.alert("user logged out");
+// });
 
 //Authentication
 app.get("/auth", authenticate, (req, res) => {});
