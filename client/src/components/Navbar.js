@@ -22,22 +22,22 @@ export default function Navbar(props) {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
                 <NavLink className="nav-link" to="/">
-                  Home <span className="sr-only">(current)</span>
+                  ראשי <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/about">
-                  About
+                  אודות
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/service">
-                  Services
+                  שרותים
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">
-                  Contact
+                  צור קשר
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -56,14 +56,14 @@ export default function Navbar(props) {
                   className="btn btn-outline-primary ms-auto px-4 rounded-pill"
                 >
                   <i className="fa fa-sign-in me-2" />
-                  Login
+                  כניסה
                 </NavLink>
                 <NavLink
                   to="/register"
                   className="btn btn-outline-primary ms-2 px-4 rounded-pill"
                 >
                   <i className="fa fa-user-plus me-2" />
-                  Register
+                  הרשמה
                 </NavLink>
               </>
             ) : (
@@ -73,14 +73,14 @@ export default function Navbar(props) {
                   className="btn btn-outline-primary ms-2 px-4 rounded-pill"
                 >
                   <i className="fa fa-user-plus me-2" />
-                  Dashboard
+                  לוח בקרה
                 </NavLink>
                 <NavLink
                   to="/logout"
                   className="btn btn-outline-primary ms-2 px-4 rounded-pill"
                 >
                   <i className="fa fa-sign-out me-2" />
-                  Logout
+                  התנתק
                 </NavLink>
               </>
             )}
