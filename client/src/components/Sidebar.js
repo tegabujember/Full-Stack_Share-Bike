@@ -1,18 +1,19 @@
 import React from "react";
-import Item from "./Item";
+import { Link } from 'react-router-dom';
+
 function Sidebar() {
   return (
     <div>
       <div id="viewport">
         <div id="sidebar">
           <header>
-            <a href="#"> Share Bike</a>
+            <Link to="#"> Share Bike</Link>
           </header>
           <ul class="nav">
             <li>
-              <a href="...">
+              <Link to="...">
                 <i class="zmdi zmdi-view-dashboard"></i>New Item
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -21,9 +22,9 @@ function Sidebar() {
             <div class="container-fluid">
               <ul class="nav navbar-nav navbar-right">
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     <i class="zmdi zmdi-notifications text-danger"></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

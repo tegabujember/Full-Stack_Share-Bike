@@ -1,0 +1,10 @@
+[
+    {
+        "_id": "5c88fa8cf4afda39709c2956",
+        "type": "bike",
+        "summary": "a new bike to rent",
+        "price": 30,
+        "images": ["https://www.cwc.co.il/images/itempics/A-008067_18022020112124_large.jpg"],
+        "address": "holon"
+    }
+]

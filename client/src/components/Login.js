@@ -61,7 +61,6 @@ const Login = () => {
             <h1 className="display-6 fw-bolder mb-5 ">כניסה</h1>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label for="exampleInputEmail1"> </label>
                 <input
                   type="email"
                   className="form-control"
@@ -77,7 +76,6 @@ const Login = () => {
                 </small>
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1"></label>
                 <input
                   type="password"
                   className="form-control"

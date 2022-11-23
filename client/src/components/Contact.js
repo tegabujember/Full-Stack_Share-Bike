@@ -65,11 +65,9 @@ const Contact = () => {
           </div>
           <div className="col-md-6 ">
             <form onSubmit={handleSubmit} method="POST">
-              <div class="form-group">
-                <label htmlFor="exampleFormControlInput1"></label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="name"
                   placeholder="שם פרטי "
                   name="name"
@@ -77,11 +75,9 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div class="form-group">
-                <label htmlFor="exampleFormControlInput1"></label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="כתובת דואר אלקטרוני "
                   name="email"
@@ -89,10 +85,8 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div class="form-group">
-                <label htmlFor="exampleFormControlTextarea1"></label>
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlTextarea1"
                   rows="5"
                   name="message"

@@ -40,6 +40,11 @@ export default function Navbar(props) {
                   צור קשר
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to='/vehicles'>
+                  All Vehicles
+                </NavLink>
+              </li>
             </ul>
             <NavLink className="navbar-brand fw-4 mx-auto" to="/">
               Share Bike
